@@ -42,7 +42,7 @@ $ pnpx degit <当前模板链接>
 
 ### 功能
 
-- 引入 `unplugin-auto-import` 插件
+- 预置 Apollo GraphQL Client
 - 一键重置模板内容的脚本
 
 ### 模板
