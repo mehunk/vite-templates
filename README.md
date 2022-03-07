@@ -20,6 +20,20 @@
 $ pnpx degit <当前模板链接>
 ```
 
+## 已知问题
+
+### 使用了 `unplugin-auto-import` 后触发 ESLint `no-undef` 规则
+
+因为 `unplugin-auto-import` 插件会自动根据上下文代码自动加入 `import` 语句，但 ESLint 无法感知，因此会提示未定义错误。建议在出现错误时，手动在 `eslint` 的配置文件中添加全局变量的配置。
+
+```javascript
+module.exports = {
+  globals: {
+    computed: true // 将 unplugin-auto-import 插件已经自动引入的变量添加到这里
+  }
+}
+```
+
 ## 其他模板分支
 
 除了当前 `master` 分支的基础模板以外，还有针对不同部门和其他专门针对 UI 框架预置的其他模板。
