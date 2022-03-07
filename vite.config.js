@@ -7,6 +7,7 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Inspect from 'vite-plugin-inspect'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +16,14 @@ export default defineConfig({
       '@': path.join(__dirname, 'src')
     }
   },
+
+  optimizeDeps: {
+    include: [
+      'ant-design-vue',
+      '@ant-design/icons-vue'
+    ]
+  },
+
   plugins: [
     vue(),
 
@@ -38,7 +47,12 @@ export default defineConfig({
     }),
 
     Components({
-      dts: 'src/components.d.ts'
+      dts: 'src/components.d.ts',
+      resolvers: [
+        AntDesignVueResolver({
+          importStyle: 'less'
+        })
+      ]
     }),
 
     // https://github.com/antfu/vite-plugin-inspect
