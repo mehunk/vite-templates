@@ -81,3 +81,4 @@ module.exports = {
 [commitlint]: https://github.com/conventional-changelog/commitlint
 [Standard Version]: https://github.com/conventional-changelog/standard-version
 [degit]: https://github.com/Rich-Harris/degit
+[vitesse]: https://github.com/antfu/vitesse

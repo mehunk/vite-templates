@@ -1,8 +1,5 @@
 <script setup>
-import { computed } from 'vue'
-import { useStore } from 'vuex'
-
-import { INCREMENT } from '@/store/mutation-types'
+import { useCounterStore } from '@/stores/counter'
 
 defineProps({
   msg: {
@@ -11,13 +8,7 @@ defineProps({
   }
 })
 
-const store = useStore()
-
-const count = computed(() => store.state.count)
-
-function increase () {
-  store.commit(INCREMENT)
-}
+const counterStore = useCounterStore()
 </script>
 
 <template>
@@ -52,9 +43,9 @@ function increase () {
 
   <button
     type="button"
-    @click="increase()"
+    @click="counterStore.increment()"
   >
-    count is: {{ count }}
+    count is: {{ counterStore.count }}
   </button>
   <p>
     Edit
