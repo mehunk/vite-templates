@@ -1,16 +1,3 @@
-<script setup>
-import { useCounterStore } from '@/stores/counter'
-
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
-
-const counterStore = useCounterStore()
-</script>
-
 <template>
   <h1>{{ $t('helloWorld.hello') }} {{ msg }}</h1>
 
@@ -51,7 +38,23 @@ const counterStore = useCounterStore()
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
+  <p>
+    {{ $filters.formatTime(Date.now()) }}
+  </p>
 </template>
+
+<script setup>
+import { useCounterStore } from '@/stores/counter'
+
+defineProps({
+  msg: {
+    type: String,
+    required: true
+  }
+})
+
+const counterStore = useCounterStore()
+</script>
 
 <style lang="less" scoped>
 a {

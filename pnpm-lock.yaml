@@ -9,6 +9,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.3.2
   ant-design-vue: ^3.2.3
   axios: ^0.27.2
+  dayjs: ^1.11.2
   eslint: ^8.15.0
   eslint-config-standard: ^17.0.0
   eslint-plugin-import: ^2.26.0
@@ -41,6 +42,7 @@ dependencies:
   '@ant-design/icons-vue': 6.1.0_vue@3.2.33
   ant-design-vue: 3.2.3_vue@3.2.33
   axios: 0.27.2
+  dayjs: 1.11.2
   lodash: 4.17.21
   pinia: 2.0.14_vue@3.2.33
   vue: 3.2.33
@@ -807,7 +809,7 @@ packages:
       '@simonwep/pickr': 1.8.2
       array-tree-filter: 2.1.0
       async-validator: 4.0.7
-      dayjs: 1.10.8
+      dayjs: 1.11.2
       dom-align: 1.12.2
       dom-scroll-into-view: 2.0.1
       lodash: 4.17.21
@@ -1358,8 +1360,8 @@ packages:
     resolution: {integrity: sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==}
     dev: true
 
-  /dayjs/1.10.8:
-    resolution: {integrity: sha512-wbNwDfBHHur9UOzNUjeKUOJ0fCb0a52Wx0xInmQ7Y8FstyajiV1NmK1e00cxsr9YrE9r7yAChE0VvpuY5Rnlow==}
+  /dayjs/1.11.2:
+    resolution: {integrity: sha512-F4LXf1OeU9hrSYRPTTj/6FbO4HTjPKXvEIC1P2kcnFurViINCVk3ZV0xAS3XVx9MkMsXbbqlK6hjseaYbgKEHw==}
     dev: false
 
   /debug/2.6.9:
