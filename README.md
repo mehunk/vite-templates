@@ -74,7 +74,7 @@ module.exports = {
 [Vite]: https://github.com/vitejs/vite
 [pnpm]: https://pnpm.js.org/
 [Vue Router]: https://next.router.vuejs.org/
-[Vuex]: https://next.vuex.vuejs.org/
+[Pinia]: https://pinia.vuejs.org/
 [Vue i18n]: https://vue-i18n.intlify.dev/
 [ESLint]: https://eslint.org/
 [Stylelint]: https://stylelint.io/
