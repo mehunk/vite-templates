@@ -1,22 +1,28 @@
 <template>
-  <img
-    alt="Vue logo"
-    src="./assets/logo.png"
-  >
-  <div>
-    <select v-model="$i18n.locale">
-      <option
-        v-for="locale in $i18n.availableLocales"
-        :key="`locale-${locale}`"
-        :value="locale"
-      >
-        {{ locale }}
-      </option>
-    </select>
-  </div>
-  <TheNav />
-  <router-view />
+  <AConfigProvider :locale="zhCN">
+    <img
+      alt="Vue logo"
+      src="./assets/logo.png"
+    >
+    <div>
+      <select v-model="$i18n.locale">
+        <option
+          v-for="locale in $i18n.availableLocales"
+          :key="`locale-${locale}`"
+          :value="locale"
+        >
+          {{ locale }}
+        </option>
+      </select>
+    </div>
+    <TheNav />
+    <router-view />
+  </AConfigProvider>
 </template>
+
+<script setup>
+import zhCN from 'ant-design-vue/es/locale/zh_CN'
+</script>
 
 <style>
 #app {

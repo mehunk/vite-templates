@@ -24,6 +24,17 @@ export default defineConfig({
     ]
   },
 
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          'root-entry-name': 'default'
+        },
+        javascriptEnabled: true
+      }
+    }
+  },
+
   plugins: [
     vue(),
 
@@ -60,5 +71,9 @@ export default defineConfig({
       // change this to enable inspect for debugging
       enabled: false
     })
-  ]
+  ],
+
+  build: {
+    assetsDir: 'static'
+  }
 })
